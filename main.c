@@ -156,21 +156,29 @@ int accion = 0;
   }
   if(accion == 3){
     int borrar = 0;
+    if(lista->sig != NULL){
     printf("Selecciona la tarea a eliminar \n");
+    }
     imprime_lista(lista);
+    if(lista->sig != NULL){
     scanf("%d",&borrar);
     eliminar_tarea(lista,borrar);
     printf("Tarea eliminada\n");
+    }
     accion = 0;
     
   }
   if(accion == 4){
     int cambiar = 0;
+    if(lista->sig != NULL){
     printf("Selecciona la tarea a cambiar \n");
+    }
     imprime_lista(lista);
+    if(lista->sig != NULL){
     scanf("%d",&cambiar);
     cambiar_estado_tarea(lista,cambiar);
     printf("Tarea actualizada\n");
+    }
     accion = 0;
   }
   if(accion == 5){ return 0;}
